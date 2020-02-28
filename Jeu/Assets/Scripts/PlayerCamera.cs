@@ -26,7 +26,7 @@ public class PlayerCamera : MonoBehaviour
 
         transform.LookAt(Target);
 
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.RightShift))
         {
             Target.rotation = Quaternion.Euler(mouseY, mouseX, 0);
         }

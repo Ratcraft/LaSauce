@@ -65,7 +65,7 @@ public class MainMenu : MonoBehaviourPunCallbacks
     {
         if (test)
         {
-            PhotonNetwork.LoadLevel(1);
+            PhotonNetwork.LoadLevel(3);
         }
     }
     public void PlayGameSolo()
