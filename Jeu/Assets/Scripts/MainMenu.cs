@@ -7,7 +7,7 @@ using Photon.Pun;
 public class MainMenu : MonoBehaviourPunCallbacks
 {
     private bool test = false;
-    // Start is called before the first frame update
+    
     
 
     public void QuitGame()
