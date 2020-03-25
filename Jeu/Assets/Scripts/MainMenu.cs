@@ -31,6 +31,7 @@ public class MainMenu : MonoBehaviourPunCallbacks
         Create();
         test = true;
         StartGame();
+        test = false;
     }
 
     public void Awake()
