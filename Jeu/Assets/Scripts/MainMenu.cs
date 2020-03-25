@@ -16,6 +16,23 @@ public class MainMenu : MonoBehaviourPunCallbacks
         Application.Quit();    
     }
     
+    public void PlayGameSolo()
+    {
+        SceneManager.LoadScene(2);
+    }
+    
+    public void PlayGameMulti()
+    {
+        Awake();
+        OnConnectedToMaster();
+        OnJoinedRoom();
+        Connect();
+        Join();
+        Create();
+        test = true;
+        StartGame();
+    }
+
     public void Awake()
     {
         PhotonNetwork.AutomaticallySyncScene = true;
@@ -68,22 +85,5 @@ public class MainMenu : MonoBehaviourPunCallbacks
             PhotonNetwork.LoadLevel(3);
         }
     }
-    public void PlayGameSolo()
-    {
-        SceneManager.LoadScene(2);
-    }
-    
-    public void PlayGameMulti()
-    {
-        Awake();
-        OnConnectedToMaster();
-        OnJoinedRoom();
-        Connect();
-        Join();
-        Create();
-        test = true;
-        StartGame();
-    }
-       
 }
 
