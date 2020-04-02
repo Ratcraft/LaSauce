@@ -30,6 +30,7 @@ namespace Com.TestMulti.SimpleHostile
         void Update()
         {
             if(!photonView.IsMine) return;
+            if (Pause.paused) return;
 
             SetX();
             SetY();

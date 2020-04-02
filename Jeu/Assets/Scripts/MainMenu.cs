@@ -9,12 +9,12 @@ namespace Com.TestMulti.SimpleHostile
     {
         public Launcher launcher;
 
-        /*private void Start()
+        private void Start()
         {
             Pause.paused = false;
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
-        }*/
+        }
 
         public void JoinMatch()
         {

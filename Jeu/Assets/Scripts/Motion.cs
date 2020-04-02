@@ -44,6 +44,8 @@ namespace Com.TestMulti.SimpleHostile
             //Initialisation des touches pour le jump et le sprint
             bool jump = Input.GetKeyDown(KeyCode.Space);
             bool sprint = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift);
+            bool pause = Input.GetKeyDown(KeyCode.Escape);
+
 
             //Initialisation des variables de jump, de sprint et de sol
             bool IsGrounded = Physics.Raycast(groundDetector.position, Vector3.down, 0.1f, ground);//permet de savoir si le joueur touche le sol ou non
@@ -78,6 +80,24 @@ namespace Com.TestMulti.SimpleHostile
             else
             {
                 normalCam.fieldOfView = Mathf.Lerp(normalCam.fieldOfView, baseFOV, Time.deltaTime * 8f);
+            }
+            if (pause)
+            {
+                GameObject.Find("Pause").GetComponent<Pause>().TogglePause();
+            }
+
+            if (Pause.paused)
+            {
+                t_hmove = 0f;
+                t_vmove = 0f;
+                sprint = false;
+                jump = false;
+                //crouch = false;
+                pause = false;
+                //isGrounded = false;
+                //isJumping = false;
+                //isSprinting = false;
+                //isCrouching = false;
             }
         }
     }
