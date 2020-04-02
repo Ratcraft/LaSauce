@@ -2,89 +2,38 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using Photon.Pun;
 
-public class MainMenu : MonoBehaviourPunCallbacks
+namespace Com.TestMulti.SimpleHostile
 {
-    private bool test = false;
-    
-    
-
-    public void QuitGame()
+    public class MainMenu : MonoBehaviour
     {
-        Debug.Log("QUIT!");
-        Application.Quit();    
-    }
-    
-    public void PlayGameSolo()
-    {
-        SceneManager.LoadScene(2);
-    }
-    
-    public void PlayGameMulti()
-    {
-        Awake();
-        OnConnectedToMaster();
-        OnJoinedRoom();
-        Connect();
-        Join();
-        Create();
-        test = true;
-        StartGame();
-        test = false;
-    }
+        public Launcher launcher;
 
-    public void Awake()
-    {
-        PhotonNetwork.AutomaticallySyncScene = true;
-        Connect();
-    }
-
-    public override void OnConnectedToMaster()
-    {
-        Debug.Log("CONNECTED");
-        Join();
-
-        base.OnConnectedToMaster();
-    }
-
-    public override void OnJoinedRoom()
-    {
-        StartGame();
-
-        base.OnJoinedRoom();
-    }
-
-    public override void OnJoinRandomFailed(short returnCode, string message)
-    {
-        Create();
-
-        base.OnJoinRandomFailed(returnCode, message);
-    }
-
-    public void Connect()
-    {
-        Debug.Log("Trying to Connect...");
-        PhotonNetwork.GameVersion = "0.0.0";
-        PhotonNetwork.ConnectUsingSettings();
-    }
-
-    public void Join()
-    {
-        PhotonNetwork.JoinRandomRoom();
-    }
-
-    public void Create()
-    {
-        PhotonNetwork.CreateRoom("");
-    }
-
-    public void StartGame()
-    {
-        if (test)
+        /*private void Start()
         {
-            PhotonNetwork.LoadLevel(3);
+            Pause.paused = false;
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }*/
+
+        public void JoinMatch()
+        {
+            launcher.Join();
+        }
+
+        public void JoinSolo()
+        {
+            SceneManager.LoadScene("SoloMode");
+        }
+
+        public void CreateMatch()
+        {
+            launcher.Create();
+        }
+
+        public void QuitGame()
+        {
+            Application.Quit();
         }
     }
 }
-

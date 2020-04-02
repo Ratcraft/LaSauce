@@ -18,7 +18,7 @@ namespace Com.TestMulti.SimpleHostile
         {
             /* lOrsque le joueur est connecté au serveur, la fonction Join va se lancer*/
             Debug.Log("CONNECTED");
-            Join();
+            
 
             base.OnConnectedToMaster();
         }
@@ -67,7 +67,7 @@ namespace Com.TestMulti.SimpleHostile
             joueur va être connecté sur le même level*/
            if(PhotonNetwork.CurrentRoom.PlayerCount == 1)
            {
-               PhotonNetwork.LoadLevel(3);
+               PhotonNetwork.LoadLevel(1);
            }
        }
        
