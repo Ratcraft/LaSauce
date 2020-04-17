@@ -716,6 +716,7 @@ MeshFilter:
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &602200266
 GameObject:
   m_ObjectHideFlags: 0
@@ -872,6 +873,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 602200266}
   m_CullTransparentMesh: 0
+=======
+>>>>>>> parent of e854a43... Menu
 =======
 >>>>>>> parent of e854a43... Menu
 --- !u!1001 &773329888
@@ -2117,6 +2120,7 @@ Transform:
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &1603591622
 GameObject:
   m_ObjectHideFlags: 0
@@ -2192,6 +2196,8 @@ CanvasRenderer:
   m_CullTransparentMesh: 0
 =======
 >>>>>>> parent of f24985c... ajout du menu pause pour le solo
+=======
+>>>>>>> parent of e854a43... Menu
 =======
 >>>>>>> parent of e854a43... Menu
 --- !u!1 &1618238710
