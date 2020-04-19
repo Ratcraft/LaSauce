@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Photon.Pun;
 
+namespace Com.TestMulti.SimpleHostile
+{
 public class PauseSolo : MonoBehaviour
 {
     [SerializeField] private GameObject pauseMenuUI;
@@ -42,7 +45,8 @@ public class PauseSolo : MonoBehaviour
 
     public void Quit()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene(0);
     }
 
+}
 }
