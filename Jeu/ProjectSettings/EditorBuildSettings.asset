@@ -15,8 +15,8 @@ EditorBuildSettings:
     path: Assets/Scenes/MapMultiTest.unity
     guid: dc948792049492543a43483818cfe4d7
   - enabled: 1
-    path: Assets/Scenes/SoloMode.unity
-    guid: f3d15f59896710d4eb23385f5421d7cf
+    path: Assets/Scenes/Solo.unity
+    guid: 0808c1479f02a08459f8a4a194ba86fb
   - enabled: 1
     path: Assets/Scenes/Menutest.unity
     guid: 91dce725b26e4134b9543a389a09b99b

@@ -23,7 +23,7 @@ namespace Com.TestMulti.SimpleHostile
 
         public void JoinSolo()
         {
-            SceneManager.LoadScene("SoloMode");
+            SceneManager.LoadScene("Solo");
         }
 
         public void CreateMatch()
