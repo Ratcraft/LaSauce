@@ -1,39 +1,44 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
-public class Motion_legs : MonoBehaviour
+
+namespace Com.TestMulti.SimpleHostil
 {
-
-    private HingeJoint Hj;
-    public Transform Myanim;
-    public bool Invert;
-
-    // Start is called before the first frame update
-    void Start()
+    public class Motion_legs : MonoBehaviourPunCallbacks
     {
-        Hj = GetComponent<HingeJoint>();
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if(Myanim != null)
+        private HingeJoint Hj;
+        public Transform Myanim;
+        public bool Invert;
+
+        // Start is called before the first frame update
+        void Start()
         {
-            JointSpring js = Hj.spring;
-            js.targetPosition = Myanim.localEulerAngles.x;      //Calcule l'angle de rotation des jambes
-            if (js.targetPosition > 180)
-                js.targetPosition = js.targetPosition - 360;
+            Hj = GetComponent<HingeJoint>();
+        }
 
-            js.targetPosition = Mathf.Clamp(js.targetPosition, Hj.limits.min + 5, Hj.limits.max - 5);
-
-
-            if (Invert)     //Permet d'inverser l'une des jambes
+        // Update is called once per frame
+        void Update()
+        {
+            if (Myanim != null)
             {
-                js.targetPosition = js.targetPosition *= -1;
-            }
+                JointSpring js = Hj.spring;
+                js.targetPosition = Myanim.localEulerAngles.x;      //Calcule l'angle de rotation des jambes
+                if (js.targetPosition > 180)
+                    js.targetPosition = js.targetPosition - 360;
 
-            Hj.spring = js;
+                js.targetPosition = Mathf.Clamp(js.targetPosition, Hj.limits.min + 5, Hj.limits.max - 5);
+
+
+                if (Invert)     //Permet d'inverser l'une des jambes
+                {
+                    js.targetPosition = js.targetPosition *= -1;
+                }
+
+                Hj.spring = js;
+            }
         }
     }
 }

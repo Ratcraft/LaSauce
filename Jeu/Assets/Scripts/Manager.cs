@@ -7,7 +7,7 @@ namespace Com.TestMulti.SimpleHostile
 {
     public class Manager : MonoBehaviourPunCallbacks
     {
-        public string player_prefab;
+        public string Player;
        
         public Transform spawn_point;
 
@@ -18,7 +18,7 @@ namespace Com.TestMulti.SimpleHostile
 
         public void Spawn ()
         {
-            PhotonNetwork.Instantiate(player_prefab, spawn_point.position, spawn_point.rotation);
+            PhotonNetwork.Instantiate(Player, spawn_point.position, spawn_point.rotation);
             
         }
     }
