@@ -11,6 +11,8 @@ namespace Com.TestMulti.SimpleHostil
         Rigidbody rb;
         public Animator Anim;
         CapsuleCollider cap;
+
+        PhotonView pv;
         
 
         float vertical;
@@ -31,13 +33,15 @@ namespace Com.TestMulti.SimpleHostil
 
         void Start()
         {
+            pv = GetComponentInParent<PhotonView>();
+
             rb = GetComponent<Rigidbody>();     //Trouve les composants
             cap = GetComponent<CapsuleCollider>();
         }
 
         void Update()
         {
-            //if (!photonView.IsMine) return;
+            if (!pv.IsMine) return;
 
             if (Input.GetKeyDown(KeyCode.Space) && IsGround)        //Permet de sauter
             {
@@ -50,7 +54,7 @@ namespace Com.TestMulti.SimpleHostil
 
         void FixedUpdate()
         {
-            //if (!photonView.IsMine) return;
+            if (!pv.IsMine) return;
             horizontal = Input.GetAxis("Horizontal");
             vertical = Input.GetAxis("Vertical");
 
