@@ -24,7 +24,7 @@ namespace Com.TestMulti.SimpleHostil
         // Update is called once per frame
         void Update()
         {
-            if (!pv.IsMine) return;
+            
             if (Myanim != null)
             {
                 JointSpring js = Hj.spring;
