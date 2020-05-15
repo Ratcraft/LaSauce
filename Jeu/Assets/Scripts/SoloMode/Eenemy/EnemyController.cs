@@ -7,7 +7,8 @@ public class EnemyController : MonoBehaviour
 {
 
     public float lookRadius = 10f;  
-    Transform target;   
+    Transform target;
+   
     NavMeshAgent agent; 
     //CharacterCombat combat;
 
@@ -16,6 +17,7 @@ public class EnemyController : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         target = PlayerManager.instance.player.transform;
+        
     }
 
    

@@ -1,19 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Photon.Pun;
+
 
 
 namespace Com.TestMulti.SimpleHostil
 {
-    public class PlayerControl : MonoBehaviourPunCallbacks
+    public class PlayerController2 : MonoBehaviour
     {
         Rigidbody rb;
         public Animator Anim;
         CapsuleCollider cap;
 
-        PhotonView pv;
         
+
 
         float vertical;
         float horizontal;
@@ -33,7 +33,7 @@ namespace Com.TestMulti.SimpleHostil
 
         void Start()
         {
-            pv = GetComponentInParent<PhotonView>();
+           
 
             rb = GetComponent<Rigidbody>();     //Trouve les composants
             cap = GetComponent<CapsuleCollider>();
@@ -41,7 +41,7 @@ namespace Com.TestMulti.SimpleHostil
 
         void Update()
         {
-            if (!pv.IsMine) return;
+            
             bool pause = Input.GetKeyDown(KeyCode.Escape);
             if (Input.GetKeyDown(KeyCode.Space) && IsGround)        //Permet de sauter
             {
@@ -67,7 +67,7 @@ namespace Com.TestMulti.SimpleHostil
 
         void FixedUpdate()
         {
-            if (!pv.IsMine) return;
+            
             horizontal = Input.GetAxis("Horizontal");
             vertical = Input.GetAxis("Vertical");
 
@@ -124,3 +124,4 @@ namespace Com.TestMulti.SimpleHostil
         }
     }
 }
+
