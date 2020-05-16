@@ -7,6 +7,7 @@ namespace Com.TestMulti.SimpleHostile
 {
     public class Launcher : MonoBehaviourPunCallbacks
     {
+    
         public void Awake()
         {
             /*La fonction Connect va se lancer pour essayer de connecter le joueur au serveur*/
@@ -54,7 +55,7 @@ namespace Com.TestMulti.SimpleHostile
            /*Le serveur va essayer de connecter le joueur à une Room*/
            PhotonNetwork.JoinRandomRoom();
        }
-
+       
        public void Create()
        {
             //création d'une nouvelle Room
@@ -68,6 +69,7 @@ namespace Com.TestMulti.SimpleHostile
            if(PhotonNetwork.CurrentRoom.PlayerCount == 1)
            {
                PhotonNetwork.LoadLevel(1);
+               
            }
        }
        

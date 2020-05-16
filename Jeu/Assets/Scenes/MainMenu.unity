@@ -1055,7 +1055,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1423899832}
-        m_MethodName: JoinMatch
+        m_MethodName: JoinMatch1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4248,7 +4248,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1423899832}
-        m_MethodName: JoinMatch
+        m_MethodName: JoinMatch2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8570,7 +8570,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1423899832}
-        m_MethodName: JoinMatch
+        m_MethodName: JoinMatch4
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9404,7 +9404,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1423899832}
-        m_MethodName: JoinMatch
+        m_MethodName: JoinMatch3
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
