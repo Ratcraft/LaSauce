@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
+using UnityEngine.SceneManagement;
 
 namespace Com.TestMulti.SimpleHostile
 {
@@ -64,14 +65,17 @@ namespace Com.TestMulti.SimpleHostile
 
        public void StartGame()
        {
-           /*Si un joueur est déjà connecté sur le level 3 alors le nouveau 
+           /*Si un joueur est déjà connecté sur le level 1 alors le nouveau 
             joueur va être connecté sur le même level*/
            if(PhotonNetwork.CurrentRoom.PlayerCount == 1)
            {
                PhotonNetwork.LoadLevel(1);
                
-           }
-       }
+            }
+            
+        }
+
+    
        
     }
 }

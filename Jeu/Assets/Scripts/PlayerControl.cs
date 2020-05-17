@@ -4,7 +4,7 @@ using UnityEngine;
 using Photon.Pun;
 
 
-namespace Com.TestMulti.SimpleHostil
+namespace Com.TestMulti.SimpleHostile
 {
     public class PlayerControl : MonoBehaviourPunCallbacks
     {
@@ -43,13 +43,14 @@ namespace Com.TestMulti.SimpleHostil
         {
             if (!pv.IsMine) return;
             bool pause = Input.GetKeyDown(KeyCode.Escape);
+            
             if (Input.GetKeyDown(KeyCode.Space) && IsGround)        //Permet de sauter
             {
                 rb.AddForce(new Vector3(0, JumpForce * 100, 0), ForceMode.Impulse);
                 IsGround = false;
 
             }
-            /*if (pause)
+            if (pause)
             {
                 GameObject.Find("Pause").GetComponent<Pause>().TogglePause();
             }
@@ -62,7 +63,8 @@ namespace Com.TestMulti.SimpleHostil
                 verticalRaw = 0f;
                 pause = false;
                 
-            }*/
+            }
+            
         }
 
         void FixedUpdate()
@@ -91,7 +93,7 @@ namespace Com.TestMulti.SimpleHostil
                 Anim.enabled = true;
             else if (inputraw.sqrMagnitude == 0)
                 Anim.enabled = false;
-            /*if (Pause.paused)
+            if (Pause.paused)
             {
                 horizontal = 0f;
                 horizontal = 0f;
@@ -99,8 +101,8 @@ namespace Com.TestMulti.SimpleHostil
                 verticalRaw = 0f;
              
 
-            }*/
-
+            }
+            
         }
 
         void OnCollisionEnter(Collision other)

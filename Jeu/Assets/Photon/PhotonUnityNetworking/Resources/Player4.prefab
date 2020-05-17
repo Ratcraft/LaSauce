@@ -2390,7 +2390,7 @@ MonoBehaviour:
   Anim: {fileID: 431659268376818412}
   Rotationspeed: 10
   Speed: 100
-  JumpForce: 5
+  JumpForce: 3
   Outvalue: 10
 --- !u!114 &6923910453748153837
 MonoBehaviour:

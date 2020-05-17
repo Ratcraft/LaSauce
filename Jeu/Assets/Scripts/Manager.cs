@@ -14,6 +14,7 @@ namespace Com.TestMulti.SimpleHostile
         //public string Player5;
 
         public MainMenu mainMenu;
+        
         public Transform spawn_point;
 
         private void Start()
@@ -44,28 +45,72 @@ namespace Com.TestMulti.SimpleHostile
         public void Spawn1 ()
         {
             PhotonNetwork.Instantiate(Player2, spawn_point.position, spawn_point.rotation);
+            /*if(PhotonNetwork.CurrentRoom.PlayerCount == 2)
+            {
+                WaitingMenue.wait = false;
+                PhotonNetwork.Instantiate(Player2, spawn_point.position, spawn_point.rotation);
+                GameObject.Find("Waiting").GetComponent<WaitingMenue>().Disable();
+                
+            }
+            else
+            {
+                 WaitingMenue.wait = true;
+                 PhotonNetwork.Instantiate(Player2, spawn_point.position, spawn_point.rotation);
+                GameObject.Find("Waiting").GetComponent<WaitingMenue>().Disable();
+            }*/
+            
+            
             
         }
         public void Spawn2 ()
         {
             PhotonNetwork.Instantiate(Player1, spawn_point.position, spawn_point.rotation);
+            /*if(PhotonNetwork.CurrentRoom.PlayerCount == 2)
+            {
+                WaitingMenue.wait = false;
+                PhotonNetwork.Instantiate(Player1, spawn_point.position, spawn_point.rotation);
+                GameObject.Find("Waiting").GetComponent<WaitingMenue>().Disable();
+                
+            }
+            else
+            {
+                 WaitingMenue.wait = true;
+            }*/
             
         }
         public void Spawn3 ()
         {
             PhotonNetwork.Instantiate(Player3, spawn_point.position, spawn_point.rotation);
+            /*if(PhotonNetwork.CurrentRoom.PlayerCount == 2)
+            {
+                WaitingMenue.wait = false;
+                PhotonNetwork.Instantiate(Player3, spawn_point.position, spawn_point.rotation);
+                GameObject.Find("Waiting").GetComponent<WaitingMenue>().Disable();
+                
+            }
+            else
+            {   
+                 WaitingMenue.wait = true;
+            }*/
             
         }
         public void Spawn4 ()
         {
             PhotonNetwork.Instantiate(Player4, spawn_point.position, spawn_point.rotation);
+            /*if(PhotonNetwork.CurrentRoom.PlayerCount == 2)
+            {
+                WaitingMenue.wait = false;
+                PhotonNetwork.Instantiate(Player4, spawn_point.position, spawn_point.rotation);
+                GameObject.Find("Waiting").GetComponent<WaitingMenue>().Disable();
+                
+            }
+            else
+            {
+                 WaitingMenue.wait = true;
+            }*/
             
+
         }
-        /*public void Spawn5 ()
-        {
-            PhotonNetwork.Instantiate(Player5, spawn_point.position, spawn_point.rotation);
-            
-        }*/
         
     }
 }

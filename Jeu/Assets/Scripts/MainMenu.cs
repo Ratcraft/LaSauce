@@ -14,6 +14,7 @@ namespace Com.TestMulti.SimpleHostile
         
         private void Start()
         {
+            //WaitingMenue.wait = true;
             Pause.paused = false;
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
