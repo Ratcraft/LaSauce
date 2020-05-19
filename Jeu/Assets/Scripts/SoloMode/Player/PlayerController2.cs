@@ -12,7 +12,7 @@ namespace Com.TestMulti.SimpleHostil
         public Animator Anim;
         CapsuleCollider cap;
 
-        
+        AudioSource JumpSound;
 
 
         float vertical;
@@ -34,7 +34,7 @@ namespace Com.TestMulti.SimpleHostil
         void Start()
         {
            
-
+            JumpSound = GetComponent<AudioSource>();
             rb = GetComponent<Rigidbody>();     //Trouve les composants
             cap = GetComponent<CapsuleCollider>();
         }
@@ -45,24 +45,12 @@ namespace Com.TestMulti.SimpleHostil
             bool pause = Input.GetKeyDown(KeyCode.Escape);
             if (Input.GetKeyDown(KeyCode.Space) && IsGround)        //Permet de sauter
             {
+                JumpSound.Play();
                 rb.AddForce(new Vector3(0, JumpForce * 100, 0), ForceMode.Impulse);
                 IsGround = false;
 
             }
-            /*if (pause)
-            {
-                GameObject.Find("Pause").GetComponent<Pause>().TogglePause();
-            }
-
-            if (Pause.paused)
-            {
-                horizontal = 0f;
-                horizontal = 0f;
-                horizontalRaw = 0f;
-                verticalRaw = 0f;
-                pause = false;
-                
-            }*/
+            
         }
 
         void FixedUpdate()
@@ -91,15 +79,7 @@ namespace Com.TestMulti.SimpleHostil
                 Anim.enabled = true;
             else if (inputraw.sqrMagnitude == 0)
                 Anim.enabled = false;
-            /*if (Pause.paused)
-            {
-                horizontal = 0f;
-                horizontal = 0f;
-                horizontalRaw = 0f;
-                verticalRaw = 0f;
-             
-
-            }*/
+           
 
         }
 
