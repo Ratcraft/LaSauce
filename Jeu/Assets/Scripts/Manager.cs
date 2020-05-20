@@ -19,6 +19,7 @@ namespace Com.TestMulti.SimpleHostile
         public Transform spawn_point2;
         public Transform spawn_point3;
         public Transform spawn_point4;
+         public Transform spawn_point5;
 
         public List<Transform> position = new List<Transform> ();
 

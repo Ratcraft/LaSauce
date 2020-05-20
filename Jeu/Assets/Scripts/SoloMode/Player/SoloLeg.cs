@@ -6,25 +6,25 @@ using Photon.Pun;
 
 namespace Com.TestMulti.SimpleHostile
 {
-    public class Motion_legs : MonoBehaviourPunCallbacks
+    public class SoloLeg : MonoBehaviourPunCallbacks
     {
 
         private HingeJoint Hj;
         public Transform Myanim;
         public bool Invert;
-        PhotonView pv;
+        
 
         // Start is called before the first frame update
         void Start()
         {
-            pv = GetComponentInParent<PhotonView>();
+            
             Hj = GetComponent<HingeJoint>();
         }
 
         // Update is called once per frame
         void Update()
         {
-            if (!pv.IsMine) return;
+            
             
             if (Myanim != null)
             {
