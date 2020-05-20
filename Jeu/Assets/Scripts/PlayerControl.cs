@@ -13,7 +13,9 @@ namespace Com.TestMulti.SimpleHostile
         CapsuleCollider cap;
 
         PhotonView pv;
+
         
+        AudioSource JumpSound;
 
         float vertical;
         float horizontal;
@@ -37,6 +39,7 @@ namespace Com.TestMulti.SimpleHostile
 
             rb = GetComponent<Rigidbody>();     //Trouve les composants
             cap = GetComponent<CapsuleCollider>();
+            JumpSound = GetComponent<AudioSource>();
         }
 
         void Update()
@@ -46,9 +49,9 @@ namespace Com.TestMulti.SimpleHostile
             
             if (Input.GetKeyDown(KeyCode.Space) && IsGround)        //Permet de sauter
             {
+                JumpSound.Play();
                 rb.AddForce(new Vector3(0, JumpForce * 100, 0), ForceMode.Impulse);
                 IsGround = false;
-
             }
             if (pause)
             {

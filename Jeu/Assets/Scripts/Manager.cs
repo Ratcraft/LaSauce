@@ -16,9 +16,18 @@ namespace Com.TestMulti.SimpleHostile
         public MainMenu mainMenu;
         
         public Transform spawn_point;
+        public Transform spawn_point2;
+        public Transform spawn_point3;
+        public Transform spawn_point4;
 
+        public List<Transform> position = new List<Transform> ();
+
+       
         private void Start()
         {
+           
+
+            
             if(MainMenu.number == 1)
             {
                 Spawn1();
@@ -44,7 +53,25 @@ namespace Com.TestMulti.SimpleHostile
 
         public void Spawn1 ()
         {
-            PhotonNetwork.Instantiate(Player2, spawn_point.position, spawn_point.rotation);
+            int res = UnityEngine.Random.Range(0,3);
+            if(res == 0)
+            {
+                PhotonNetwork.Instantiate(Player1, spawn_point.position, spawn_point.rotation);
+            }
+            if(res == 1)
+            {
+                PhotonNetwork.Instantiate(Player1, spawn_point2.position, spawn_point.rotation);
+            }
+            if(res == 2)
+            {
+                PhotonNetwork.Instantiate(Player1, spawn_point3.position, spawn_point.rotation);
+            }
+            if(res == 3)
+            {
+                PhotonNetwork.Instantiate(Player1, spawn_point4.position, spawn_point.rotation);
+            }
+            
+            
             /*if(PhotonNetwork.CurrentRoom.PlayerCount == 2)
             {
                 WaitingMenue.wait = false;
@@ -64,7 +91,24 @@ namespace Com.TestMulti.SimpleHostile
         }
         public void Spawn2 ()
         {
-            PhotonNetwork.Instantiate(Player1, spawn_point.position, spawn_point.rotation);
+            int res2 = UnityEngine.Random.Range(0,3);
+            if(res2 == 0)
+            {
+                PhotonNetwork.Instantiate(Player2, spawn_point.position, spawn_point.rotation);
+            }
+            if(res2 == 1)
+            {
+                PhotonNetwork.Instantiate(Player2, spawn_point2.position, spawn_point.rotation);
+            }
+            if(res2 == 2)
+            {
+                PhotonNetwork.Instantiate(Player2, spawn_point3.position, spawn_point.rotation);
+            }
+            if(res2 == 3)
+            {
+                PhotonNetwork.Instantiate(Player2, spawn_point4.position, spawn_point.rotation);
+            }
+            //PhotonNetwork.Instantiate(Player2, spawn_point.position, spawn_point.rotation);
             /*if(PhotonNetwork.CurrentRoom.PlayerCount == 2)
             {
                 WaitingMenue.wait = false;
@@ -80,7 +124,24 @@ namespace Com.TestMulti.SimpleHostile
         }
         public void Spawn3 ()
         {
-            PhotonNetwork.Instantiate(Player3, spawn_point.position, spawn_point.rotation);
+            int res3 = UnityEngine.Random.Range(0,3);
+            if(res3 == 0)
+            {
+                PhotonNetwork.Instantiate(Player3, spawn_point.position, spawn_point.rotation);
+            }
+            if(res3 == 1)
+            {
+                PhotonNetwork.Instantiate(Player3, spawn_point2.position, spawn_point.rotation);
+            }
+            if(res3 == 2)
+            {
+                PhotonNetwork.Instantiate(Player3, spawn_point3.position, spawn_point.rotation);
+            }
+            if(res3 == 3)
+            {
+                PhotonNetwork.Instantiate(Player3, spawn_point4.position, spawn_point.rotation);
+            }
+            //PhotonNetwork.Instantiate(Player3, spawn_point.position, spawn_point.rotation);
             /*if(PhotonNetwork.CurrentRoom.PlayerCount == 2)
             {
                 WaitingMenue.wait = false;
@@ -96,7 +157,24 @@ namespace Com.TestMulti.SimpleHostile
         }
         public void Spawn4 ()
         {
-            PhotonNetwork.Instantiate(Player4, spawn_point.position, spawn_point.rotation);
+            int res4 = UnityEngine.Random.Range(0,3);
+            if(res4 == 0)
+            {
+                PhotonNetwork.Instantiate(Player4, spawn_point.position, spawn_point.rotation);
+            }
+            if(res4 == 1)
+            {
+                PhotonNetwork.Instantiate(Player4, spawn_point2.position, spawn_point.rotation);
+            }
+            if(res4 == 2)
+            {
+                PhotonNetwork.Instantiate(Player4, spawn_point3.position, spawn_point.rotation);
+            }
+            if(res4 == 3)
+            {
+                PhotonNetwork.Instantiate(Player4, spawn_point4.position, spawn_point.rotation);
+            }
+            //PhotonNetwork.Instantiate(Player4, spawn_point.position, spawn_point.rotation);
             /*if(PhotonNetwork.CurrentRoom.PlayerCount == 2)
             {
                 WaitingMenue.wait = false;
