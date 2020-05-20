@@ -16,6 +16,7 @@ namespace Com.TestMulti.SimpleHostile
 
         
         AudioSource JumpSound;
+        InputManager inputManager;
 
         float vertical;
         float horizontal;
@@ -40,6 +41,7 @@ namespace Com.TestMulti.SimpleHostile
             rb = GetComponent<Rigidbody>();     //Trouve les composants
             cap = GetComponent<CapsuleCollider>();
             JumpSound = GetComponent<AudioSource>();
+            inputManager = GameObject.FindObjectOfType<InputManager>();
         }
 
         void Update()
@@ -47,7 +49,7 @@ namespace Com.TestMulti.SimpleHostile
             if (!pv.IsMine) return;
             bool pause = Input.GetKeyDown(KeyCode.Escape);
             
-            if (Input.GetKeyDown(KeyCode.Space) && IsGround)        //Permet de sauter
+            if (inputManager.GetButtonDown("Jump")/*Input.GetKeyDown(KeyCode.Space)*/ && IsGround)        //Permet de sauter
             {
                 JumpSound.Play();
                 rb.AddForce(new Vector3(0, JumpForce * 100, 0), ForceMode.Impulse);
