@@ -1,0 +1,241 @@
+fileFormatVersion: 2
+guid: f5c9ba489e100664d8b19258b54853fe
+ModelImporter:
+  serializedVersion: 26
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: HeadLight
+  - first:
+      1: 100002
+    second: //RootNode
+  - first:
+      1: 100004
+    second: SportsCar
+  - first:
+      1: 100006
+    second: TailLight
+  - first:
+      1: 100008
+    second: Wheel.Front.Left
+  - first:
+      1: 100010
+    second: Wheel.Front.Right
+  - first:
+      1: 100012
+    second: Wheel.Rear.Left
+  - first:
+      1: 100014
+    second: Wheel.Rear.Right
+  - first:
+      4: 400000
+    second: HeadLight
+  - first:
+      4: 400002
+    second: //RootNode
+  - first:
+      4: 400004
+    second: SportsCar
+  - first:
+      4: 400006
+    second: TailLight
+  - first:
+      4: 400008
+    second: Wheel.Front.Left
+  - first:
+      4: 400010
+    second: Wheel.Front.Right
+  - first:
+      4: 400012
+    second: Wheel.Rear.Left
+  - first:
+      4: 400014
+    second: Wheel.Rear.Right
+  - first:
+      23: 2300000
+    second: HeadLight
+  - first:
+      23: 2300002
+    second: SportsCar
+  - first:
+      23: 2300004
+    second: TailLight
+  - first:
+      23: 2300006
+    second: Wheel.Front.Left
+  - first:
+      23: 2300008
+    second: Wheel.Front.Right
+  - first:
+      23: 2300010
+    second: Wheel.Rear.Left
+  - first:
+      23: 2300012
+    second: Wheel.Rear.Right
+  - first:
+      33: 3300000
+    second: HeadLight
+  - first:
+      33: 3300002
+    second: SportsCar
+  - first:
+      33: 3300004
+    second: TailLight
+  - first:
+      33: 3300006
+    second: Wheel.Front.Left
+  - first:
+      33: 3300008
+    second: Wheel.Front.Right
+  - first:
+      33: 3300010
+    second: Wheel.Rear.Left
+  - first:
+      33: 3300012
+    second: Wheel.Rear.Right
+  - first:
+      43: 4300000
+    second: SportsCar
+  - first:
+      43: 4300002
+    second: Wheel.Front.Right
+  - first:
+      43: 4300004
+    second: TailLight
+  - first:
+      43: 4300006
+    second: HeadLight
+  - first:
+      43: 4300008
+    second: Wheel.Front.Left
+  - first:
+      43: 4300010
+    second: Wheel.Rear.Left
+  - first:
+      43: 4300012
+    second: Wheel.Rear.Right
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: HeadLights
+    second: {fileID: 2100000, guid: 52d99b04d14f3904fa88b1cea926c6a4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LimeGreen
+    second: {fileID: 2100000, guid: f81ae6304d2b65242b0714895024382e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SportsBodyMat
+    second: {fileID: 2100000, guid: 2ff3dbc8680763b46bbaa3c76faf236b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TailLightGlow
+    second: {fileID: 2100000, guid: 405c6e4fbff5c9a4891b1cdc6258f96d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TailLightGlow_02
+    second: {fileID: 2100000, guid: 944ff458012b20d49a20a0e9761bb891, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tyre
+    second: {fileID: 2100000, guid: 38d4fad269e6c3f49ada9157bda5a65e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Window
+    second: {fileID: 2100000, guid: 747ac2916cd850645bfb5f16c70289bd, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 2
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.35
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 0.35
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
