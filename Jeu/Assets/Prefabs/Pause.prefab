@@ -1290,7 +1290,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3882047132112375862}
+      - m_Target: {fileID: 3764595863019015910}
         m_MethodName: Quit
         m_Mode: 1
         m_Arguments:
@@ -1419,7 +1419,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3882047132112375862}
+      - m_Target: {fileID: 3764595863019015910}
         m_MethodName: TogglePause
         m_Mode: 1
         m_Arguments:
@@ -1745,7 +1745,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4417865241630376152}
-  - component: {fileID: 3882047132112375862}
+  - component: {fileID: 3764595863019015910}
   m_Layer: 5
   m_Name: Pause
   m_TagString: Untagged
@@ -1773,7 +1773,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &3882047132112375862
+--- !u!114 &3764595863019015910
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

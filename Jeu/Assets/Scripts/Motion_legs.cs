@@ -4,7 +4,7 @@ using UnityEngine;
 using Photon.Pun;
 
 
-namespace Com.TestMulti.SimpleHostil
+namespace Com.TestMulti.SimpleHostile
 {
     public class Motion_legs : MonoBehaviourPunCallbacks
     {
@@ -24,6 +24,7 @@ namespace Com.TestMulti.SimpleHostil
         // Update is called once per frame
         void Update()
         {
+            if (!pv.IsMine) return;
             
             if (Myanim != null)
             {

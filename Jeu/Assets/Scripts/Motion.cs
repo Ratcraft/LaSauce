@@ -29,6 +29,7 @@ namespace Com.TestMulti.SimpleHostile
             baseFOV = normalCam.fieldOfView;/*Initialisation du fov de la caméra*/
             Camera.main.enabled = false;
             rig = GetComponent<Rigidbody>();
+            
         }
 
         void Update()

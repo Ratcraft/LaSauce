@@ -4,7 +4,7 @@ using UnityEngine;
 using Photon.Pun;
 
 
-namespace Com.TestMulti.SimpleHostil
+namespace Com.TestMulti.SimpleHostile
 {
     public class PlayerControl : MonoBehaviourPunCallbacks
     {
@@ -13,8 +13,12 @@ namespace Com.TestMulti.SimpleHostil
         CapsuleCollider cap;
 
         PhotonView pv;
+
         
         GetHit getHitscript;
+        AudioSource JumpSound;
+        InputManager inputManager;
+
         float vertical;
         float horizontal;
 
@@ -39,18 +43,36 @@ namespace Com.TestMulti.SimpleHostil
             rb = GetComponent<Rigidbody>();     //Trouve les composants
             cap = GetComponent<CapsuleCollider>();
             getHitscript = GetComponent<GetHit>();
+            JumpSound = GetComponent<AudioSource>();
+            inputManager = GameObject.FindObjectOfType<InputManager>();
         }
 
         void Update()
         {
-       
-            if (Input.GetKeyDown(KeyCode.Space) && IsGround && !getHitscript.Isdead)        //Permet de sauter
+            if (!pv.IsMine) return;
+            bool pause = Input.GetKeyDown(KeyCode.Escape);
+            
+            if (Input.GetKeyDown(KeyCode.Space) && IsGround && !getHitscript.Isdead)       //Permet de sauter
             {
+                JumpSound.Play();
                 rb.AddForce(new Vector3(0, JumpForce * 100, 0), ForceMode.Impulse);
                 IsGround = false;
-
             }
-           
+            if (pause)
+            {
+                GameObject.Find("Pause").GetComponent<Pause>().TogglePause();
+            }
+
+            if (Pause.paused)
+            {
+                horizontal = 0f;
+                horizontal = 0f;
+                horizontalRaw = 0f;
+                verticalRaw = 0f;
+                pause = false;
+                
+            }
+            
         }
 
         void FixedUpdate()
@@ -78,7 +100,16 @@ namespace Com.TestMulti.SimpleHostil
                 Anim.enabled = true;
             else if (inputraw.sqrMagnitude == 0)
                 Anim.enabled = false;
+            if (Pause.paused)
+            {
+                horizontal = 0f;
+                horizontal = 0f;
+                horizontalRaw = 0f;
+                verticalRaw = 0f;
+             
 
+            }
+            
         }
 
         void OnCollisionEnter(Collision other)
