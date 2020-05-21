@@ -14,7 +14,7 @@ namespace Com.TestMulti.SimpleHostil
 
         PhotonView pv;
         
-
+        GetHit getHitscript;
         float vertical;
         float horizontal;
 
@@ -29,21 +29,22 @@ namespace Com.TestMulti.SimpleHostil
         public float JumpForce = 7;
         bool IsGround = true;
 
+        
+
         public float Outvalue = 10;
 
         void Start()
         {
             pv = GetComponentInParent<PhotonView>();
-
             rb = GetComponent<Rigidbody>();     //Trouve les composants
             cap = GetComponent<CapsuleCollider>();
+            getHitscript = GetComponent<GetHit>();
         }
 
         void Update()
         {
-            if (!pv.IsMine) return;
-
-            if (Input.GetKeyDown(KeyCode.Space) && IsGround)        //Permet de sauter
+       
+            if (Input.GetKeyDown(KeyCode.Space) && IsGround && !getHitscript.Isdead)        //Permet de sauter
             {
                 rb.AddForce(new Vector3(0, JumpForce * 100, 0), ForceMode.Impulse);
                 IsGround = false;
@@ -54,7 +55,6 @@ namespace Com.TestMulti.SimpleHostil
 
         void FixedUpdate()
         {
-            if (!pv.IsMine) return;
             horizontal = Input.GetAxis("Horizontal");
             vertical = Input.GetAxis("Vertical");
 
