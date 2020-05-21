@@ -12,20 +12,16 @@ namespace Com.TestMulti.SimpleHostile
         private HingeJoint Hj;
         public Transform Myanim;
         public bool Invert;
-        PhotonView pv;
 
         // Start is called before the first frame update
         void Start()
         {
-            pv = GetComponentInParent<PhotonView>();
             Hj = GetComponent<HingeJoint>();
         }
 
         // Update is called once per frame
         void Update()
         {
-            if (!pv.IsMine) return;
-            
             if (Myanim != null)
             {
                 JointSpring js = Hj.spring;

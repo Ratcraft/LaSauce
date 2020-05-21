@@ -13,20 +13,15 @@ namespace Com.TestMulti.SimpleHostile
         CapsuleCollider cap;
 
         PhotonView pv;
-
-        
         GetHit getHitscript;
         AudioSource JumpSound;
         InputManager inputManager;
 
         float vertical;
         float horizontal;
-
         float verticalRaw;
         float horizontalRaw;
-
         Vector3 targetRotation;
-
         public float Rotationspeed = 10;
         public float Speed = 100;
 
@@ -49,7 +44,6 @@ namespace Com.TestMulti.SimpleHostile
 
         void Update()
         {
-            if (!pv.IsMine) return;
             bool pause = Input.GetKeyDown(KeyCode.Escape);
             
             if (Input.GetKeyDown(KeyCode.Space) && IsGround && !getHitscript.Isdead)       //Permet de sauter

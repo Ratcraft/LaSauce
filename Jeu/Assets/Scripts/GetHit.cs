@@ -26,7 +26,6 @@ public class GetHit : MonoBehaviour
         }
     }
 
-
     void OnTriggerEnter(Collider target){
         if (target.tag == "HitZone"){
             dmgscript = target.GetComponent<Damage>();
