@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 namespace Com.TestMulti.SimpleHostile
 {
-    public class Launcher : MonoBehaviourPunCallbacks
+    public class Launcher2 : MonoBehaviourPunCallbacks
     {
     
         public static int nb;
@@ -33,10 +33,10 @@ namespace Com.TestMulti.SimpleHostile
             {
                 StartGame();
             }
-            if(nb == 2)
+            /*if(nb == 2)
             {
                 StartGame2();
-            }
+            }*/
             
 
             base.OnJoinedRoom();
@@ -72,7 +72,7 @@ namespace Com.TestMulti.SimpleHostile
        {
            /*Le serveur va essayer de connecter le joueur à une Room*/
            nb = 2;
-           
+           //PhotonNetwork.JoinRandomRoom();
            PhotonNetwork.JoinRandomRoom();
            
        }
@@ -91,19 +91,6 @@ namespace Com.TestMulti.SimpleHostile
             joueur va être connecté sur le même level*/
            if(PhotonNetwork.CurrentRoom.PlayerCount ==1)
            {
-               PhotonNetwork.LoadLevel(1);
-               
-            }
-            
-            
-            
-        }
-        public void StartGame2()
-       {
-           /*Si un joueur est déjà connecté sur le level 1 alors le nouveau 
-            joueur va être connecté sur le même level*/
-           if(PhotonNetwork.CurrentRoom.PlayerCount == 1)
-           {
                PhotonNetwork.LoadLevel(6);
                
             }
@@ -111,6 +98,7 @@ namespace Com.TestMulti.SimpleHostile
             
             
         }
+        
 
     
        
