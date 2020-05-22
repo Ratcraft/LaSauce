@@ -20,6 +20,7 @@ public class Attack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         JointSpring js = hjcoude.spring;
         if (Input.GetKey(key)){ 
             go.tag = "HitZone";
