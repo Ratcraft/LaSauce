@@ -14,6 +14,7 @@ public class Attack : MonoBehaviour
     void Start()
     {
         hj = GetComponent<HingeJoint>();
+        
     }
 
     // Update is called once per frame
