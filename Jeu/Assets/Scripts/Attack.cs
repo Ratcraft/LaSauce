@@ -5,23 +5,22 @@ using UnityEngine;
 public class Attack : MonoBehaviour
 {
     HingeJoint hj;
-    //public KeyCode key;
+    public KeyCode key;
     public HingeJoint hjcoude;
 
     public GameObject go;
-    InputManager inputManager;
+
     // Start is called before the first frame update
     void Start()
     {
         hj = GetComponent<HingeJoint>();
-        inputManager = GameObject.FindObjectOfType<InputManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
         JointSpring js = hjcoude.spring;
-        if (inputManager.GetButtonDown("Attack")/*Input.GetKey(key)*/){ 
+        if (Input.GetKey(key)){ 
             go.tag = "HitZone";
             hj.useSpring = true;
             js.targetPosition = -90;

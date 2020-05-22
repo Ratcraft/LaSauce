@@ -9,7 +9,7 @@ public class InputManager : MonoBehaviour
     {
         buttonKeys = new Dictionary<string, KeyCode>();
         buttonKeys["Jump"] = KeyCode.Space;
-        buttonKeys["Attack"] = KeyCode.Q;
+        //buttonKeys["Left"] = KeyCode.LeftArrow;
         //buttonKeys["Right"] = KeyCode.RightArrow;
     }
     Dictionary<string, KeyCode> buttonKeys;

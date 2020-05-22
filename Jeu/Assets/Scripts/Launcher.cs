@@ -72,9 +72,7 @@ namespace Com.TestMulti.SimpleHostile
        {
            /*Le serveur va essayer de connecter le joueur à une Room*/
            nb = 2;
-           
            PhotonNetwork.JoinRandomRoom();
-           
        }
 
         
@@ -89,13 +87,11 @@ namespace Com.TestMulti.SimpleHostile
        {
            /*Si un joueur est déjà connecté sur le level 1 alors le nouveau 
             joueur va être connecté sur le même level*/
-           if(PhotonNetwork.CurrentRoom.PlayerCount ==1)
+           if(PhotonNetwork.CurrentRoom.PlayerCount == 1)
            {
                PhotonNetwork.LoadLevel(1);
                
             }
-            
-            
             
         }
         public void StartGame2()
@@ -107,8 +103,6 @@ namespace Com.TestMulti.SimpleHostile
                PhotonNetwork.LoadLevel(6);
                
             }
-            
-            
             
         }
 

@@ -44,10 +44,9 @@ namespace Com.TestMulti.SimpleHostile
 
         void Update()
         {
-            if (!pv.IsMine) return;
             bool pause = Input.GetKeyDown(KeyCode.Escape);
             
-            if (inputManager.GetButtonDown("Jump")/*Input.GetKeyDown(KeyCode.Space)*/ && IsGround && !getHitscript.Isdead)       //Permet de sauter
+            if (Input.GetKeyDown(KeyCode.Space) && IsGround && !getHitscript.Isdead)       //Permet de sauter
             {
                 JumpSound.Play();
                 rb.AddForce(new Vector3(0, JumpForce * 100, 0), ForceMode.Impulse);
@@ -72,7 +71,6 @@ namespace Com.TestMulti.SimpleHostile
 
         void FixedUpdate()
         {
-            if (!pv.IsMine) return;
             horizontal = Input.GetAxis("Horizontal");
             vertical = Input.GetAxis("Vertical");
 

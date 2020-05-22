@@ -8,7 +8,6 @@ namespace Com.TestMulti.SimpleHostile
     public class MainMenu : MonoBehaviour
     {
         public Launcher launcher;
-        //public Launcher2 launcher2;
 
         public static int number;
         
