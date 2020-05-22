@@ -23,4 +23,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/WaitingRoom.unity
     guid: 3dba644c444568e4e9d646166b3a2673
+  - enabled: 1
+    path: Assets/Scenes/Ring FINAL.unity
+    guid: f1db709781a749c4a91e8b928f2593c8
+  - enabled: 1
+    path: Assets/Scenes/Ring.unity
+    guid: e97e9b7b6798f0046b2312ac2f2c67d9
   m_configObjects: {}

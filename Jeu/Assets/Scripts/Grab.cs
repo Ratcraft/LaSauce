@@ -29,6 +29,7 @@ public class Grab : MonoBehaviour
                     Fj.connectedBody = Rb;
                     Fj.breakForce = 8000;
                     IsGrab = true;
+                    MyGrabObj.tag = "HitZone";
                 }
             }
             else if (Input.GetKeyUp(GrabInput))
@@ -37,6 +38,7 @@ public class Grab : MonoBehaviour
                 {
                     Destroy(MyGrabObj.GetComponent<FixedJoint>());
                 }
+                MyGrabObj.tag = "Item";
                 MyGrabObj = null;
                 IsGrab = false;
             }

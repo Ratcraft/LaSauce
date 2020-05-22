@@ -13,41 +13,40 @@ namespace Com.TestMulti.SimpleHostile
         CapsuleCollider cap;
 
         PhotonView pv;
-
-        
+        GetHit getHitscript;
         AudioSource JumpSound;
+        InputManager inputManager;
 
         float vertical;
         float horizontal;
-
         float verticalRaw;
         float horizontalRaw;
-
         Vector3 targetRotation;
-
         public float Rotationspeed = 10;
         public float Speed = 100;
 
         public float JumpForce = 7;
         bool IsGround = true;
 
+        
+
         public float Outvalue = 10;
 
         void Start()
         {
             pv = GetComponentInParent<PhotonView>();
-
             rb = GetComponent<Rigidbody>();     //Trouve les composants
             cap = GetComponent<CapsuleCollider>();
+            getHitscript = GetComponent<GetHit>();
             JumpSound = GetComponent<AudioSource>();
+            inputManager = GameObject.FindObjectOfType<InputManager>();
         }
 
         void Update()
         {
-            if (!pv.IsMine) return;
             bool pause = Input.GetKeyDown(KeyCode.Escape);
             
-            if (Input.GetKeyDown(KeyCode.Space) && IsGround)        //Permet de sauter
+            if (Input.GetKeyDown(KeyCode.Space) && IsGround && !getHitscript.Isdead)       //Permet de sauter
             {
                 JumpSound.Play();
                 rb.AddForce(new Vector3(0, JumpForce * 100, 0), ForceMode.Impulse);
@@ -72,7 +71,6 @@ namespace Com.TestMulti.SimpleHostile
 
         void FixedUpdate()
         {
-            if (!pv.IsMine) return;
             horizontal = Input.GetAxis("Horizontal");
             vertical = Input.GetAxis("Vertical");
 

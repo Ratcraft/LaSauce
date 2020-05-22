@@ -1,20 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Photon.Pun;
 
 
 namespace Com.TestMulti.SimpleHostile
 {
-    public class PlayerController2 : MonoBehaviour
+    public class PlayerControlRing : MonoBehaviourPunCallbacks
     {
         Rigidbody rb;
         public Animator Anim;
         CapsuleCollider cap;
 
+        PhotonView pv;
+
+        
         AudioSource JumpSound;
         InputManager inputManager;
-
 
         float vertical;
         float horizontal;
@@ -34,31 +36,45 @@ namespace Com.TestMulti.SimpleHostile
 
         void Start()
         {
-           
-            JumpSound = GetComponent<AudioSource>();
+            pv = GetComponentInParent<PhotonView>();
+
             rb = GetComponent<Rigidbody>();     //Trouve les composants
             cap = GetComponent<CapsuleCollider>();
+            JumpSound = GetComponent<AudioSource>();
             inputManager = GameObject.FindObjectOfType<InputManager>();
-            
         }
 
         void Update()
         {
-            
+            if (!pv.IsMine) return;
             bool pause = Input.GetKeyDown(KeyCode.Escape);
+            
             if (inputManager.GetButtonDown("Jump")/*Input.GetKeyDown(KeyCode.Space)*/ && IsGround)        //Permet de sauter
             {
                 JumpSound.Play();
                 rb.AddForce(new Vector3(0, JumpForce * 100, 0), ForceMode.Impulse);
                 IsGround = false;
+            }
+            if (pause)
+            {
+                GameObject.Find("Pause").GetComponent<Pause>().TogglePause();
+            }
 
+            if (Pause.paused)
+            {
+                horizontal = 0f;
+                horizontal = 0f;
+                horizontalRaw = 0f;
+                verticalRaw = 0f;
+                pause = false;
+                
             }
             
         }
 
         void FixedUpdate()
         {
-            
+            if (!pv.IsMine) return;
             horizontal = Input.GetAxis("Horizontal");
             vertical = Input.GetAxis("Vertical");
 
@@ -82,8 +98,16 @@ namespace Com.TestMulti.SimpleHostile
                 Anim.enabled = true;
             else if (inputraw.sqrMagnitude == 0)
                 Anim.enabled = false;
-           
+            if (Pause.paused)
+            {
+                horizontal = 0f;
+                horizontal = 0f;
+                horizontalRaw = 0f;
+                verticalRaw = 0f;
+             
 
+            }
+            
         }
 
         void OnCollisionEnter(Collision other)
@@ -107,4 +131,3 @@ namespace Com.TestMulti.SimpleHostile
         }
     }
 }
-
