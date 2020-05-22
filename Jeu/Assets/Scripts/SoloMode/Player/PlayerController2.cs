@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 
-namespace Com.TestMulti.SimpleHostile
+namespace Com.TestMulti.SimpleHostil
 {
     public class PlayerController2 : MonoBehaviour
     {
@@ -13,7 +13,6 @@ namespace Com.TestMulti.SimpleHostile
         CapsuleCollider cap;
 
         AudioSource JumpSound;
-        InputManager inputManager;
 
 
         float vertical;
@@ -38,15 +37,13 @@ namespace Com.TestMulti.SimpleHostile
             JumpSound = GetComponent<AudioSource>();
             rb = GetComponent<Rigidbody>();     //Trouve les composants
             cap = GetComponent<CapsuleCollider>();
-            inputManager = GameObject.FindObjectOfType<InputManager>();
-            
         }
 
         void Update()
         {
             
             bool pause = Input.GetKeyDown(KeyCode.Escape);
-            if (inputManager.GetButtonDown("Jump")/*Input.GetKeyDown(KeyCode.Space)*/ && IsGround)        //Permet de sauter
+            if (Input.GetKeyDown(KeyCode.Space) && IsGround)        //Permet de sauter
             {
                 JumpSound.Play();
                 rb.AddForce(new Vector3(0, JumpForce * 100, 0), ForceMode.Impulse);

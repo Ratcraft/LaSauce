@@ -11,9 +11,6 @@ namespace Com.TestMulti.SimpleHostile
 
         public static int number;
         
-       
-        
-        
         
         private void Start()
         {
@@ -24,58 +21,43 @@ namespace Com.TestMulti.SimpleHostile
         
         }
 
-        
+        /*public void Set1(int x)
+        {
+            x = 1;
+        }
+         public void Set2(int x)
+        {
+            x = 2;
+        }
+         public void Set3(int x)
+        {
+            x = 3;
+        }
+         public void Set4(int x)
+        {
+            x = 4;
+        }*/
 
         public void JoinMatch1()
         {
             MainMenu.number = 1;
-            
             launcher.Join();
         }
         public void JoinMatch2()
         {
             MainMenu.number = 2;
-            
             launcher.Join();
         }
         public void JoinMatch3()
         {
             MainMenu.number = 3;
-            
             launcher.Join();
         }
         public void JoinMatch4()
         {
             MainMenu.number = 4;
-            
             launcher.Join();
         }
-
-        public void JoinMatch5()
-        {
-            MainMenu.number = 1;
-            
-            launcher.Join2();
-        }
-        public void JoinMatch6()
-        {
-            MainMenu.number = 2;
-           
-            launcher.Join2();
-        }
-        public void JoinMatch7()
-        {
-            MainMenu.number = 3;
-            
-            launcher.Join2();
-        }
-        public void JoinMatch8()
-        {
-            MainMenu.number = 4;
-            
-            launcher.Join2();
-        }
-        
         /*public void JoinMatch5()
         {
             MainMenu.number = 5;
@@ -85,10 +67,6 @@ namespace Com.TestMulti.SimpleHostile
         public void JoinSolo()
         {
             SceneManager.LoadScene("Solo");
-        }
-        public void JoinSolo2()
-        {
-            SceneManager.LoadScene("Ring");
         }
 
         public void CreateMatch()

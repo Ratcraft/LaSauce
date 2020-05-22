@@ -9,7 +9,6 @@ namespace Com.TestMulti.SimpleHostile
     public class Launcher : MonoBehaviourPunCallbacks
     {
     
-        public static int nb;
         public void Awake()
         {
             /*La fonction Connect va se lancer pour essayer de connecter le joueur au serveur*/
@@ -29,20 +28,10 @@ namespace Com.TestMulti.SimpleHostile
         public override void OnJoinedRoom()
         {
             /* Lorsque le joueur a join une Room, la fonction StartGame va se lancer*/
-            if(nb == 1)
-            {
-                StartGame();
-            }
-            if(nb == 2)
-            {
-                StartGame2();
-            }
-            
+            StartGame();
 
             base.OnJoinedRoom();
         }
-
-        
 
         public override void OnJoinRandomFailed(short returnCode, string message)
         {
@@ -65,17 +54,8 @@ namespace Com.TestMulti.SimpleHostile
        public void Join()
        {
            /*Le serveur va essayer de connecter le joueur à une Room*/
-           nb = 1;
            PhotonNetwork.JoinRandomRoom();
        }
-        public void Join2()
-       {
-           /*Le serveur va essayer de connecter le joueur à une Room*/
-           nb = 2;
-           PhotonNetwork.JoinRandomRoom();
-       }
-
-        
        
        public void Create()
        {
@@ -90,17 +70,6 @@ namespace Com.TestMulti.SimpleHostile
            if(PhotonNetwork.CurrentRoom.PlayerCount == 1)
            {
                PhotonNetwork.LoadLevel(1);
-               
-            }
-            
-        }
-        public void StartGame2()
-       {
-           /*Si un joueur est déjà connecté sur le level 1 alors le nouveau 
-            joueur va être connecté sur le même level*/
-           if(PhotonNetwork.CurrentRoom.PlayerCount == 1)
-           {
-               PhotonNetwork.LoadLevel(6);
                
             }
             
