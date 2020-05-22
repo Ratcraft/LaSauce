@@ -149,10 +149,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1e6da8730058eb4fb56d6f1a03fd262, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player1: REDPlayer
-  Player2: BLUEPlayer
-  Player3: Player3
-  Player4: Player4
+  Player1: PlayerR
+  Player2: PlayerB
+  Player3: PlayerY
+  Player4: PlayerP
   mainMenu: {fileID: 242548781}
   spawn_point: {fileID: 269702370}
   spawn_point2: {fileID: 1933323935}
