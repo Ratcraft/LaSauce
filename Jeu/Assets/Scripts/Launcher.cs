@@ -121,7 +121,7 @@ namespace Com.TestMulti.SimpleHostile
             joueur va être connecté sur le même level*/
            if(PhotonNetwork.CurrentRoom.PlayerCount == 1)
            {
-               PhotonNetwork.LoadLevel(6);
+               PhotonNetwork.LoadLevel(8);
                
             }
             

@@ -102,7 +102,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5168720370518143645}
   m_Layer: 0
-  m_Name: PlayerP
+  m_Name: playerP
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1486,7 +1486,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e1aa4561d05f9cb4fb20814e6d56960a, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.445
+  m_Volume: 0.384
   m_Pitch: 1
   Loop: 0
   Mute: 0
