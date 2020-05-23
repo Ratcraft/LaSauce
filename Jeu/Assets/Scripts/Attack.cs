@@ -7,6 +7,9 @@ public class Attack : MonoBehaviour
     HingeJoint hj;
     public KeyCode key;
     public HingeJoint hjcoude;
+    InputManager inputManager;
+
+    AudioSource HitSound;
 
     public GameObject go;
 
@@ -14,6 +17,8 @@ public class Attack : MonoBehaviour
     void Start()
     {
         hj = GetComponent<HingeJoint>();
+        HitSound = GetComponent<AudioSource>();
+        inputManager = GameObject.FindObjectOfType<InputManager>();
         
     }
 
@@ -22,10 +27,12 @@ public class Attack : MonoBehaviour
     {
         
         JointSpring js = hjcoude.spring;
-        if (Input.GetKey(key)){ 
+        if (Input.GetKey(key)/*inputManager.GetButtonDown("Hit")*/){ 
+            
             go.tag = "HitZone";
             hj.useSpring = true;
             js.targetPosition = -90;
+            HitSound.Play();
         }
         else{
             go.tag = "Hitbox";

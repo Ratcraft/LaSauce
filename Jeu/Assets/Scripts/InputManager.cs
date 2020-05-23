@@ -9,8 +9,11 @@ public class InputManager : MonoBehaviour
     {
         buttonKeys = new Dictionary<string, KeyCode>();
         buttonKeys["Jump"] = KeyCode.Space;
-        //buttonKeys["Left"] = KeyCode.LeftArrow;
-        //buttonKeys["Right"] = KeyCode.RightArrow;
+        buttonKeys["Hit"] = KeyCode.F;
+        buttonKeys["up"] = KeyCode.W;
+        buttonKeys["down"] = KeyCode.S;
+        //buttonKeys["left"] = KeyCode.A;
+        //buttonKeys["right"] = KeyCode.D;
     }
     Dictionary<string, KeyCode> buttonKeys;
     
