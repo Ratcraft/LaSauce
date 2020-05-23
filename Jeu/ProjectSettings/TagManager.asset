@@ -9,6 +9,7 @@ TagManager:
   - Item
   - Hitbox
   - HitZone
+  - HitDeath
   layers:
   - Default
   - TransparentFX
