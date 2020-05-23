@@ -75,6 +75,31 @@ namespace Com.TestMulti.SimpleHostile
             
             launcher.Join2();
         }
+
+        public void JoinMatch9()
+        {
+            MainMenu.number = 1;
+            
+            launcher.Join3();
+        }
+        public void JoinMatch10()
+        {
+            MainMenu.number = 2;
+           
+            launcher.Join3();
+        }
+        public void JoinMatch11()
+        {
+            MainMenu.number = 3;
+            
+            launcher.Join3();
+        }
+        public void JoinMatch12()
+        {
+            MainMenu.number = 4;
+            
+            launcher.Join3();
+        }
         
         /*public void JoinMatch5()
         {

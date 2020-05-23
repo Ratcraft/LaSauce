@@ -37,6 +37,10 @@ namespace Com.TestMulti.SimpleHostile
             {
                 StartGame2();
             }
+            if(nb == 3)
+            {
+                StartGame3();
+            }
             
 
             base.OnJoinedRoom();
@@ -74,6 +78,12 @@ namespace Com.TestMulti.SimpleHostile
            nb = 2;
            PhotonNetwork.JoinRandomRoom();
        }
+       public void Join3()
+       {
+           /*Le serveur va essayer de connecter le joueur à une Room*/
+           nb = 3;
+           PhotonNetwork.JoinRandomRoom();
+       }
 
         
        
@@ -95,6 +105,17 @@ namespace Com.TestMulti.SimpleHostile
             
         }
         public void StartGame2()
+       {
+           /*Si un joueur est déjà connecté sur le level 1 alors le nouveau 
+            joueur va être connecté sur le même level*/
+           if(PhotonNetwork.CurrentRoom.PlayerCount == 1)
+           {
+               PhotonNetwork.LoadLevel(6);
+               
+            }
+            
+        }
+        public void StartGame3()
        {
            /*Si un joueur est déjà connecté sur le level 1 alors le nouveau 
             joueur va être connecté sur le même level*/
