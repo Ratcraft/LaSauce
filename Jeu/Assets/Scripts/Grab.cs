@@ -7,6 +7,7 @@ public class Grab : MonoBehaviour
     public KeyCode GrabInput;
     public GameObject MyGrabObj;
     public bool IsGrab = false;
+    InputManager inputManager;
 
     Rigidbody Rb;
 
@@ -14,6 +15,7 @@ public class Grab : MonoBehaviour
     void Start()
     {
         Rb = GetComponent<Rigidbody>();
+        inputManager = GameObject.FindObjectOfType<InputManager>();
     }
 
     // Update is called once per frame
@@ -21,7 +23,7 @@ public class Grab : MonoBehaviour
     {
         if (MyGrabObj != null)
         {
-            if (Input.GetKey(GrabInput))
+            if (inputManager.GetButtonDown("Grab")/*Input.GetKey(GrabInput)*/)
             {
                 if (!IsGrab)
                 {

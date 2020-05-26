@@ -10,8 +10,7 @@ public class InputManager : MonoBehaviour
         buttonKeys = new Dictionary<string, KeyCode>();
         buttonKeys["Jump"] = KeyCode.Space;
         buttonKeys["Hit"] = KeyCode.F;
-        buttonKeys["up"] = KeyCode.W;
-        buttonKeys["down"] = KeyCode.S;
+        buttonKeys["Grab"] = KeyCode.Mouse0;
         //buttonKeys["left"] = KeyCode.A;
         //buttonKeys["right"] = KeyCode.D;
     }
