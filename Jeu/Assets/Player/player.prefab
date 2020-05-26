@@ -150,6 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dmgscript: {fileID: 0}
   Health: 100
+  Hurt: {fileID: 0}
   Isdead: 0
 --- !u!1 &5311716521438512090
 GameObject:
@@ -931,6 +932,11 @@ PrefabInstance:
       propertyPath: m_IsKinematic
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1339947808644359154, guid: e8ef7e234cd97294b876ca5c857f6342,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1339947808644359159, guid: e8ef7e234cd97294b876ca5c857f6342,
         type: 3}
       propertyPath: m_Height
@@ -960,6 +966,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1339947808644359159, guid: e8ef7e234cd97294b876ca5c857f6342,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1339947808848205717, guid: e8ef7e234cd97294b876ca5c857f6342,
         type: 3}

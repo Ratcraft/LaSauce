@@ -35,6 +35,10 @@ public class GetHit : MonoBehaviour
             dmgscript = target.GetComponent<Damage>();
             Health -= dmgscript.realDamage;
         }
+        if (target.tag == "HitDeath"){
+            Hurt.Play();
+            Health = 0;
+        }
     }
 
 }
