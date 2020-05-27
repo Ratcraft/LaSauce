@@ -34,7 +34,7 @@ public class Grab : MonoBehaviour
                     MyGrabObj.tag = "HitZone";
                 }
             }
-            else if (Input.GetKeyUp(GrabInput))
+            else if (inputManager.GetButtonDown("Grab")/*Input.GetKeyUp(GrabInput)*/)
             {
                 if (MyGrabObj.CompareTag("Item"))
                 {

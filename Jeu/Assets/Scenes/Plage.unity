@@ -3228,7 +3228,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.2
+  m_Radius: 1.4
   m_Center: {x: 0, y: 1, z: 0}
 --- !u!114 &248879207
 MonoBehaviour:
@@ -10564,7 +10564,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.2
+  m_Radius: 1.4
   m_Center: {x: 0, y: 1, z: 0}
 --- !u!114 &834387656
 MonoBehaviour:
@@ -10934,7 +10934,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.7763388, y: 9.847447, z: 0.5980591}
+  m_Size: {x: 4, y: 9.847447, z: 0.5980591}
   m_Center: {x: 0.000000012169244, y: 0.37182236, z: 0.20416604}
 --- !u!1 &861186463
 GameObject:
@@ -11437,7 +11437,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.0916927, y: 13.664916, z: 1.3752489}
+  m_Size: {x: 4, y: 13.664916, z: 1.3752489}
   m_Center: {x: 0, y: -0.23382425, z: -0.13597259}
 --- !u!114 &908416529
 MonoBehaviour:
@@ -19258,7 +19258,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.7763388, y: 9.847447, z: 0.59805894}
+  m_Size: {x: 4, y: 9.847447, z: 0.59805894}
   m_Center: {x: 0, y: 0.37182236, z: 0.20416604}
 --- !u!1001 &1633686317
 PrefabInstance:
@@ -22723,7 +22723,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.35
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0.3, z: 0}
 --- !u!114 &1819267938
 MonoBehaviour:
@@ -24831,7 +24831,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.2
+  m_Radius: 1.4
   m_Center: {x: 0, y: 1, z: 0}
 --- !u!114 &2025730742
 MonoBehaviour:
